@@ -1,0 +1,12 @@
+.idea/
+__pycache__/
+*.py[cod]
+*.log
+results/*
+!results/.gitkeep
+*.db
+.venv/
+venv/
+*.egg-info/
+dist/
+build/

@@ -1,0 +1,40 @@
+# This file describes how to cite this software.
+# Update the DOI field once the CIBB paper is published.
+
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Reinforcement Learning-Based Control Strategy for Boolean Gene Regulatory Networks"
+version: 0.1.0
+date-released: "2026-06-30"
+authors:
+  - family-names: "Kugler"
+    given-names: "Hillel"
+  - family-names: "Raviv"
+    given-names: "Avraham"
+  - family-names: "Glazz"
+    given-names: "Hila"
+  - family-names: "Shoob"
+    given-names: "Michal"
+repository-code: "https://github.com/michal-shoob/rl-boolean-grn-control"
+license: MIT
+keywords:
+  - gene regulatory networks
+  - boolean networks
+  - reinforcement learning
+  - temporal-difference learning
+  - computational biology
+preferred-citation:
+  type: conference-paper
+  title: "Reinforcement Learning-Based Control Strategy for Boolean Gene Regulatory Networks"
+  authors:
+    - family-names: "Kugler"
+      given-names: "Hillel"
+    - family-names: "Raviv"
+      given-names: "Avraham"
+    - family-names: "Glazz"
+      given-names: "Hila"
+    - family-names: "Shoob"
+      given-names: "Michal"
+  collection-title: "International Conference on Computational Intelligence Methods for Bioinformatics and Biostatistics (CIBB)"
+  year: 2026
+  notes: "Add the DOI and page numbers once the paper is published."
