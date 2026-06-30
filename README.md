@@ -22,14 +22,22 @@ If you use this code, please cite the paper and this repository (see
 
 ## Abstract
 
-Boolean GRNs model gene interactions as discrete dynamical systems. Finding
-control policies that drive such networks from a given initial configuration
-to a target phenotype is combinatorially hard when multiple nodes can be
-intervened on. We apply reinforcement learning—specifically TD learning with
-value-function approximation, experience replay, and state aggregation—to
-learn intervention policies on benchmark networks ranging from 7 to 100 nodes.
-The agent selects which controllable genes to toggle at each step while the
-network evolves under synchronous Boolean update rules.
+The control problem in Boolean Gene Regulatory Networks (GRNs) is a central
+challenge in computational biology, focusing on guiding biological systems
+toward desired target states by determining suitable assignments for unknown
+node states. The objective is not only to reach the target state, but to do so
+in the most efficient manner, while minimizing changes in node states
+throughout the network dynamics. However, as the size and complexity of the
+network increases, the state space grows exponentially, making exhaustive
+search approaches computationally infeasible. To address this challenge, this
+work presents a scalable Reinforcement Learning (RL) framework based on
+Temporal Difference (TD) learning. By integrating a Hybrid Decision Strategy,
+Importance-Based State Aggregation, and a persistent external memory
+architecture alongside cache optimization, our framework identifies optimal
+control policies for networks with up to 50 nodes within 21 seconds. We
+demonstrate that the use of a state-value V(s) representation, combined with
+domain-specific heuristics, effectively navigates a large search space of
+assignments while maintaining a bounded memory footprint.
 
 ## Requirements
 
@@ -40,7 +48,7 @@ network evolves under synchronous Boolean update rules.
 ## Installation
 
 ```bash
-git clone https://github.com/michal-shoob/rl-boolean-grn-control.git
+git clone https://github.com/glhila/rl-boolean-grn-control.git
 cd rl-boolean-grn-control
 python -m venv .venv
 .venv\Scripts\activate        # Windows
@@ -116,22 +124,6 @@ agent summary printed at the end of each run.
    `print_comparison_summary()`.
 
 See `grn_td/td_agent.py` and the paper for full algorithmic details.
-
-## Publishing to GitHub
-
-This codebase is **not** linked to the original course repository. To publish it
-for the article:
-
-1. Create a new empty repository on GitHub named `rl-boolean-grn-control`
-   (under your account or lab organization).
-2. From this project directory, connect and push:
-
-```bash
-git remote add origin https://github.com/michal-shoob/rl-boolean-grn-control.git
-git push -u origin main
-```
-
-Replace the URL if the repository lives under a different account or name.
 
 ## License
 
